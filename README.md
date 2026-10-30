@@ -2,6 +2,8 @@
 
 Painel full stack para receber webhooks, transformar payloads e acompanhar falhas de integrações sem perder o contexto da execução.
 
+**Back-end em Python (FastAPI + SQLAlchemy + PostgreSQL) em [`services/api`](services/api); front-end em TypeScript/React em [`app/`](app).** A barra de linguagens do GitHub mostra mais TypeScript e CSS porque mede bytes de arquivo, não o peso de cada parte: toda a lógica de webhooks (idempotência, assinatura HMAC, retries) está na API Python.
+
 **[Abrir demonstração](https://aresta.daniel-moulaz.workers.dev)**
 
 [![CI](https://github.com/daniel-moulaz/aresta/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/daniel-moulaz/aresta/actions/workflows/ci.yml)

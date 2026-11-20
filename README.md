@@ -6,7 +6,7 @@ Painel full stack para receber webhooks, transformar payloads e acompanhar falha
 
 **[Abrir demonstração](https://aresta.daniel-moulaz.workers.dev)**
 
-[![CI](https://github.com/daniel-moulaz/aresta/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/daniel-moulaz/aresta/actions/workflows/ci.yml)
+[![CI](https://github.com/moul4z/aresta/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/moul4z/aresta/actions/workflows/ci.yml)
 
 > A versão online usa dados de demonstração para continuar acessível sem infraestrutura externa. Ao rodar com Docker, o painel se conecta à API Python e persiste os eventos no PostgreSQL.
 

@@ -1,5 +1,11 @@
 # Aresta
 
+> **In English:** Aresta is a small full-stack project for receiving webhooks and diagnosing integration failures.
+> The API (Python, FastAPI, SQLAlchemy, PostgreSQL) verifies HMAC-SHA256 signatures, deduplicates events by idempotency key per workflow, allows retries only for recoverable errors and marks events that run out of attempts as `dead_letter`.
+> The dashboard (React, TypeScript) is a UI demo with sample data; the [live demo](https://aresta.daniel-moulaz.workers.dev) does not show real metrics.
+> Automated tests for the API and the dashboard run in GitHub Actions on every push to `main` and every pull request.
+> Run it locally with `docker compose up --build`. The rest of this README is in Portuguese.
+
 Painel full stack para receber webhooks, transformar payloads e acompanhar falhas de integrações sem perder o contexto da execução.
 
 **Back-end em Python (FastAPI + SQLAlchemy + PostgreSQL) em [`services/api`](services/api); front-end em TypeScript/React em [`app/`](app).** A barra de linguagens do GitHub mostra mais TypeScript e CSS porque mede bytes de arquivo, não o peso de cada parte: toda a lógica de webhooks (idempotência, assinatura HMAC, retries) está na API Python.
@@ -165,3 +171,5 @@ A decisão sobre idempotência e retry está registrada em [ADR 0001](docs/decis
 - executar o processo BPMN em um cluster Camunda 8.
 
 Usei ferramentas de IA como apoio para comparar alternativas e revisar pontos específicos. As decisões, a implementação e os testes foram validados durante o desenvolvimento do projeto.
+
+Portfólio: [moulaz.dev](https://moulaz.dev) · [English](https://moulaz.dev/en/)
